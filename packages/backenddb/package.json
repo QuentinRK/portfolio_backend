@@ -1,0 +1,27 @@
+{
+  "name": "backenddb",
+  "version": "0.0.0",
+  "private": true,
+  "description": "dynamodb table that stores website data",
+  "author": "QuentinRK <q.rankin@outlook.com>",
+  "homepage": "https://github.com/QuentinRK/personal_web_backend#readme",
+  "license": "ISC",
+  "main": "backenddb.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/QuentinRK/personal_web_backend.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/QuentinRK/personal_web_backend/issues"
+  }
+}

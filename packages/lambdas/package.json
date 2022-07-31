@@ -1,0 +1,32 @@
+{
+  "name": "lambdas",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Houses all lambda functions",
+  "author": "QuentinRK <q.rankin@outlook.com>",
+  "homepage": "https://github.com/QuentinRK/personal_web_backend#readme",
+  "license": "ISC",
+  "main": "lib/lambdas.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/QuentinRK/personal_web_backend.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "local": "node-lambda run",
+    "build": "tsc -w"
+  },
+  "bugs": {
+    "url": "https://github.com/QuentinRK/personal_web_backend/issues"
+  },
+  "devDependencies": {
+    "dynamodb-local": "^0.0.31"
+  }
+}
