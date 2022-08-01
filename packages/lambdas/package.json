@@ -28,5 +28,11 @@
   },
   "devDependencies": {
     "dynamodb-local": "^0.0.31"
+  },
+  "dependencies": {
+    "aws-lambda": "^1.0.7",
+    "aws-sdk": "^2.1185.0",
+    "aws-sdk-mock": "^5.7.0",
+    "backenddb": "^0.0.0"
   }
 }

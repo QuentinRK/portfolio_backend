@@ -1,7 +1,7 @@
-import { Construct } from "@aws-cdk/core";
-import { IGrantable } from "@aws-cdk/aws-iam";
-import { Table, AttributeType, BillingMode } from "@aws-cdk/aws-dynamodb";
-import { TableNames } from "./TableNames";
+import { Construct } from '@aws-cdk/core';
+import { IGrantable } from '@aws-cdk/aws-iam';
+import { Table, AttributeType, BillingMode } from '@aws-cdk/aws-dynamodb';
+import { TableNames } from './TableNames';
 
 export class BackendDatabase extends Construct {
   private websiteDataTable: Table;

@@ -1,0 +1,26 @@
+name: Deployment
+
+on:
+  merge:
+    branches:
+      - master
+jobs:
+  strategy:
+    matrix:
+      os: ['ubuntu-latest', 'windows-latest', 'macos-latest']
+
+  runs-on: ${{matrix.os}}
+  steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name:
+      uses: rlespinasse/git-commit-data-action@v1.x
+
+    - name: Create Pull Request
+      uses: peter-evans/create-pull-request@v4
+      with:
+        branch: develop
+        commit-message: ${{ env.GIT_COMMIT_MESSAGE }}
+        base: master
+        committer: ${{ env.GIT_COMMIT_AUTHOR_NAME}} <${{env.GIT_COMMIT_AUTHOR_EMAIL}}>

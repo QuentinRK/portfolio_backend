@@ -1,0 +1,9 @@
+{
+  "Item": {
+    "name": { "S": "bio" },
+    "description": {
+      "S": "The creativity and freedom that comes with software development is what ensnared me and motivated me to learn Python, Javascript and SQL. Through the development of the following projects (using Django, Flask, React etc) I have honed my skills in order to create intuitive user interfaces and efficient backend programs, ultimately becoming a better problem solver."
+    },
+    "recordType": { "S": "biography" }
+  }
+}

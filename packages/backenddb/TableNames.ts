@@ -1,3 +1,3 @@
 export enum TableNames {
-    WebsiteData = 'websiteData'
-};
+  WebsiteData = 'websiteData',
+}
