@@ -6,7 +6,6 @@ import {
   QueryOutput,
 } from 'aws-sdk/clients/dynamodb';
 import { PromiseResult } from 'aws-sdk/lib/request';
-import { TableNames } from 'backenddb/TableNames';
 
 export default class {
   private dyanmodb: DynamoDB;
@@ -20,7 +19,7 @@ export default class {
 
   getProjectsData = async (): Promise<PromiseResult<QueryOutput, AWSError>> => {
     const params: QueryInput = {
-      TableName: TableNames.WebsiteData,
+      TableName: 'websiteData',
       KeyConditionExpression: '#dba90 = :dba90',
       ExpressionAttributeNames: { '#dba90': 'recordType' },
       ExpressionAttributeValues: { ':dba90': { S: 'project' } },
@@ -33,7 +32,7 @@ export default class {
 
   getBioData = async (): Promise<PromiseResult<GetItemOutput, AWSError>> => {
     const params: GetItemInput = {
-      TableName: TableNames.WebsiteData,
+      TableName: 'websiteData',
       Key: {
         recordType: { S: 'biography' },
         name: { S: 'bio' },
