@@ -13,6 +13,9 @@ jobs:
     environment:
       name: deployCode
     steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        
       - name: Extract Commit Data
         uses: rlespinasse/git-commit-data-action@v1.x
 
