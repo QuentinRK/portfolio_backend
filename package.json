@@ -1,6 +1,7 @@
 {
   "name": "personal_web_backend",
   "version": "0.1.0",
+  "private": true,
   "bin": {
     "personal_web_backend": "bin/personal_web_backend.js"
   },
@@ -44,7 +45,6 @@
     "aws-cdk-lib": "2.34.2",
     "aws-lambda": "^1.0.7",
     "aws-sdk": "^2.1185.0",
-    "backenddb": "^0.0.0",
     "constructs": "^10.0.0",
     "source-map-support": "^0.5.21"
   },

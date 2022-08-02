@@ -1,34 +1,27 @@
 name: Production
-
 on:
   push:
     branches:
-      - develop
+      - master
 jobs:
-  strategy:
-    matrix:
-      node-version: [10.x, 12.x, 14.x, 15.x]
-      os: ['ubuntu-latest', 'windows-latest', 'macos-latest']
+  build:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
 
-  runs-on: ${{matrix.os}}
-  steps:
-    - name: Checkout
-      uses: actions/checkout@v3
+    runs-on: ${{ matrix.os }}
 
-    - name: Setup Node Runner
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{matrix.node-version}}
-        cache: npm
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
 
-    - name: Install Dependencies
-      run: npm install
+      - name: Extract Commit Data
+        uses: rlespinasse/git-commit-data-action@v1.x
 
-    - name: Run Unit & Integration Tests
-      run: npm test
-
-    - name: Merge To Master
-      uses: devmasx/merge-branch@master
-      with:
-        type: now
-        target_branch: master
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v4
+        with:
+          branch: develop
+          commit-message: ${{ env.GIT_COMMIT_MESSAGE }}
+          base: master
+          committer: ${{ env.GIT_COMMIT_AUTHOR_NAME}} <${{env.GIT_COMMIT_AUTHOR_EMAIL}}>

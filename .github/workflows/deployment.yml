@@ -1,26 +1,38 @@
 name: Deployment
-
 on:
-  merge:
+  push:
     branches:
-      - master
+      - develop
 jobs:
-  strategy:
-    matrix:
-      os: ['ubuntu-latest', 'windows-latest', 'macos-latest']
+  test:
+    strategy:
+      matrix:
+        node-version: [14.x, 16.x]
+        os: ["ubuntu-latest", "windows-latest", "macos-latest"]
 
-  runs-on: ${{matrix.os}}
-  steps:
-    - name: Checkout
-      uses: actions/checkout@v3
+    runs-on: ${{matrix.os}}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
 
-    - name:
-      uses: rlespinasse/git-commit-data-action@v1.x
+      - name: Setup Node Runner
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{matrix.node-version}}
 
-    - name: Create Pull Request
-      uses: peter-evans/create-pull-request@v4
-      with:
-        branch: develop
-        commit-message: ${{ env.GIT_COMMIT_MESSAGE }}
-        base: master
-        committer: ${{ env.GIT_COMMIT_AUTHOR_NAME}} <${{env.GIT_COMMIT_AUTHOR_EMAIL}}>
+      - name: Install Dependencies
+        run: |
+          npm install
+          npx lerna bootstrap
+
+      - name: Run Unit & Integration Tests
+        run: npm test
+
+      - name: Merge To Master
+        uses: octokit/request-action@v2.0.24
+        with:
+          route: GET /repos/QuentinRK/personal_web_backend/branches/master/protection
+          mediaType: |
+            format: application/json
+        env:
+          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
