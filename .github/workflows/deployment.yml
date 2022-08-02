@@ -32,4 +32,5 @@ jobs:
           title: "Automated"
           labels: automated pr
           branch: master
+          base: develop
           reviewers: QuentinRK
