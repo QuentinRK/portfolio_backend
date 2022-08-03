@@ -22,7 +22,7 @@ jobs:
       - name: Install Dependencies
         run: |
           npm install
-          npx lerna bootstrap
+          npx lerna bootstrap --hoist
 
       - name: Run Unit & Integration Tests
         run: npm test

@@ -17,5 +17,12 @@
     "no-process-exit": "off",
     "object-shorthand": "off",
     "class-methods-use-this": "off"
-  }
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  },
 }

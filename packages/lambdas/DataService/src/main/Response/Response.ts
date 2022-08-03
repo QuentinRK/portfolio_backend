@@ -1,5 +1,5 @@
 import { APIGatewayProxyResult } from 'aws-lambda';
-import corsHeaders from './corsHeaders';
+import corsHeaders from './CorsHeaders';
 
 export const success = (body: string): APIGatewayProxyResult => ({
   statusCode: 200,

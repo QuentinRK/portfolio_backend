@@ -27,6 +27,7 @@
     "url": "https://github.com/QuentinRK/personal_web_backend/issues"
   },
   "devDependencies": {
+    "@types/jest": "^28.1.6",
     "dynamodb-local": "^0.0.31"
   },
   "dependencies": {
