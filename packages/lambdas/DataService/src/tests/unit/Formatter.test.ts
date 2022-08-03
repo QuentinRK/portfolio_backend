@@ -2,7 +2,7 @@
 import { QueryOutput, GetItemOutput } from 'aws-sdk/clients/dynamodb';
 import { PromiseResult } from 'aws-sdk/lib/request';
 import { AWSError } from 'aws-sdk';
-import Formatter, { throwFormatError } from '../../main/Formatter/formatter';
+import Formatter, { throwFormatError } from '../../main/Formatter/Formatter';
 import projectsFormat from '../mocks/formattedProjects.json';
 import bioFormat from '../mocks/formattedBio.json';
 import projects from '../mocks/projects.json';

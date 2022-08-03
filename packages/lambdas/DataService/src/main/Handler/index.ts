@@ -2,9 +2,9 @@ import { APIGatewayProxyResult, APIGatewayEvent } from 'aws-lambda';
 import { PromiseResult } from 'aws-sdk/lib/request';
 import { AWSError } from 'aws-sdk';
 import { GetItemOutput, QueryOutput } from 'aws-sdk/clients/dynamodb';
-import { failure, success } from '../Response/response';
+import { failure, success } from '../Response/Response';
 import WebsiteDataRepository from '../Repository/WebsiteDataRepository';
-import formatter from '../Formatter/formatter';
+import formatter from '../Formatter/Formatter';
 import { FormatResponse } from '../Interfaces/FormatterInterface';
 
 const main = async (event: APIGatewayEvent): Promise<APIGatewayProxyResult> => {

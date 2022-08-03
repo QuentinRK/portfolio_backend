@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 import { APIGatewayProxyResult } from 'aws-lambda';
-import { success, failure } from '../../main/Response/response';
-import corsHeaders from '../../main/Response/corsHeaders';
+import { success, failure } from '../../main/Response/Response';
+import corsHeaders from '../../main/Response/CorsHeaders';
 
 describe('Tests Success Response', () => {
   it('Tests formatter for projects', async () => {
