@@ -32,4 +32,4 @@ jobs:
         run: yarn cdk synth
 
       - name: Deploy stack
-        run: yarn cdk deploy
+        run: yarn cdk deploy --require-approval never
