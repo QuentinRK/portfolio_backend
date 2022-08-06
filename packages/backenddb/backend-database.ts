@@ -4,21 +4,22 @@ import { Table, AttributeType, BillingMode } from '@aws-cdk/aws-dynamodb';
 import { TableNames } from './TableNames';
 
 export class BackendDatabase extends Construct {
-  private websiteDataTable: Table;
+	private websiteDataTable: Table;
 
-  constructor(scope: Construct, id: string) {
-    super(scope, id);
+	constructor(scope: Construct, id: string) {
+		super(scope, id);
 
-    this.websiteDataTable = new Table(this, TableNames.WebsiteData, {
-      partitionKey: { name: id, type: AttributeType.STRING },
-      billingMode: BillingMode.PROVISIONED,
-      readCapacity: 25,
-      writeCapacity: 25,
-      tableName: TableNames.WebsiteData,
-    });
-  }
+		this.websiteDataTable = new Table(this, TableNames.WebsiteData, {
+			partitionKey: { name: 'recordType', type: AttributeType.STRING },
+			sortKey: { name: 'name', type: AttributeType.STRING },
+			billingMode: BillingMode.PROVISIONED,
+			readCapacity: 25,
+			writeCapacity: 25,
+			tableName: TableNames.WebsiteData,
+		});
+	}
 
-  allowCrud(grantee: IGrantable) {
-    this.websiteDataTable.grantReadWriteData(grantee);
-  }
+	allowCrud(grantee: IGrantable) {
+		this.websiteDataTable.grantReadWriteData(grantee);
+	}
 }
