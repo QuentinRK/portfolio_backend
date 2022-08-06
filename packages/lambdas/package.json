@@ -1,39 +1,39 @@
 {
-	"name": "lambdas",
-	"version": "0.0.0",
-	"private": true,
-	"description": "Houses all lambda functions",
-	"author": "QuentinRK <q.rankin@outlook.com>",
-	"homepage": "https://github.com/QuentinRK/personal_web_backend#readme",
-	"license": "ISC",
-	"main": "lib/lambdas.js",
-	"directories": {
-		"lib": "lib",
-		"test": "__tests__"
-	},
-	"files": [
-		"lib"
-	],
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/QuentinRK/personal_web_backend.git"
-	},
-	"scripts": {
-		"test": "echo \"Error: run tests from root\" && exit 1",
-		"local": "node-lambda run",
-		"build": "tsc -w"
-	},
-	"bugs": {
-		"url": "https://github.com/QuentinRK/personal_web_backend/issues"
-	},
-	"devDependencies": {
-		"dynamodb-local": "^0.0.31",
-		"node-lambda": "^1.0.0"
-	},
-	"dependencies": {
-		"aws-lambda": "^1.0.7",
-		"aws-sdk": "^2.1185.0",
-		"aws-sdk-mock": "^5.7.0",
-		"backenddb": "^0.0.0"
-	}
+  "name": "lambdas",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Houses all lambda functions",
+  "author": "QuentinRK <q.rankin@outlook.com>",
+  "homepage": "https://github.com/QuentinRK/personal_web_backend#readme",
+  "license": "ISC",
+  "main": "lib/lambdas.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/QuentinRK/personal_web_backend.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "local": "node-lambda run",
+    "build": "tsc -w"
+  },
+  "bugs": {
+    "url": "https://github.com/QuentinRK/personal_web_backend/issues"
+  },
+  "devDependencies": {
+    "@types/jest": "^28.1.6",
+    "dynamodb-local": "^0.0.31"
+  },
+  "dependencies": {
+    "aws-lambda": "^1.0.7",
+    "aws-sdk": "^2.1185.0",
+    "aws-sdk-mock": "^5.7.0",
+    "backenddb": "^0.0.0"
+  }
 }
