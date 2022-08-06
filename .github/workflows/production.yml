@@ -24,7 +24,9 @@ jobs:
           aws-region: ${{secrets.AWS_REGION}}
 
       - name: Install dependencies
-        run: yarn
+        run: |
+          yarn
+          npm run webpack
 
       - name: Synth stack
         run: yarn cdk synth
