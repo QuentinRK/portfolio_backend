@@ -2,7 +2,7 @@ name: Production
 on:
   workflow_run:
     workflows: [Release]
-    branches: [masteer]
+    branches: [master]
     types:
       - completed
 jobs:
