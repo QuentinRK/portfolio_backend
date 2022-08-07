@@ -25,6 +25,8 @@
     "url": "https://github.com/QuentinRK/personal_web_backend/issues"
   },
   "dependencies": {
-    "backenddb": "^0.0.0"
+    "@aws-cdk/core": "^1.167.0",
+    "backenddb": "^0.0.0",
+    "backend_api": "^0.0.0"
   }
 }

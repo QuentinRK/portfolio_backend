@@ -23,5 +23,10 @@
   },
   "bugs": {
     "url": "https://github.com/QuentinRK/personal_web_backend/issues"
+  },
+  "dependencies": {
+    "@aws-cdk/aws-apigateway": "^1.167.0",
+    "@aws-cdk/aws-lambda": "^1.167.0",
+    "@aws-cdk/core": "^1.167.0"
   }
 }
