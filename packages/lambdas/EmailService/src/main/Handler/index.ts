@@ -37,7 +37,7 @@ const sendEmail = async ({ name, email, message }: Email) => {
 };
 
 const handler = async (event: APIGatewayEvent): Promise<APIGatewayProxyResult | Error> => {
-  const payload = event.body;
+  const payload = JSON.parse(String(event.body));
   switch (event.path) {
     case '/contact':
       if (payload && validate(payload)) {
