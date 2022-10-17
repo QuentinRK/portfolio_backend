@@ -39,11 +39,13 @@ export default class BackendApi extends Construct {
     getContactLambda.addToRolePolicy(policyStatement);
 
     const aboutMe = api.root.addResource('about-me');
+    const workHistory = api.root.addResource('work');
     const projects = api.root.addResource('projects');
     const contact = api.root.addResource('contact');
 
     aboutMe.addMethod('GET', new LambdaIntegration(getWebsiteDataLambda));
     projects.addMethod('GET', new LambdaIntegration(getWebsiteDataLambda));
+    workHistory.addMethod('GET', new LambdaIntegration(getWebsiteDataLambda));
     contact.addMethod('POST', new LambdaIntegration(getContactLambda));
 
     this.getHandler = getWebsiteDataLambda;

@@ -47,4 +47,21 @@ export default class {
         return err;
       });
   };
+
+  getWorkData = async (): Promise<PromiseResult<GetItemOutput, AWSError>> => {
+    const params: QueryInput = {
+      TableName: TableNames.WebsiteData,
+      KeyConditionExpression: '#dba90 = :dba90',
+      ExpressionAttributeNames: { '#dba90': 'recordType' },
+      ExpressionAttributeValues: { ':dba90': { S: 'work' } },
+    };
+
+    return this.dyanmodb
+      .query(params)
+      .promise()
+      .catch((err) => {
+        console.log(`Query Failed: ${err}`);
+        return err;
+      });
+  };
 }

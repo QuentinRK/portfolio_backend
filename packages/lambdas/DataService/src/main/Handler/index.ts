@@ -15,11 +15,15 @@ const handler = async (event: APIGatewayEvent): Promise<APIGatewayProxyResult> =
   switch (event.path) {
     case '/about-me':
       payload = await websiteData.getBioData();
-      formattedResponse = formatter(payload);
+      formattedResponse = formatter(payload, 'bio');
       return success(JSON.stringify(formattedResponse));
     case '/projects':
       payload = await websiteData.getProjectsData();
-      formattedResponse = formatter(payload);
+      formattedResponse = formatter(payload, 'projects');
+      return success(JSON.stringify(formattedResponse));
+    case '/work':
+      payload = await websiteData.getWorkData();
+      formattedResponse = formatter(payload, 'work');
       return success(JSON.stringify(formattedResponse));
     default:
       return failure(JSON.stringify({ message: 'Route Not Found' }), 404);

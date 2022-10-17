@@ -1,0 +1,24 @@
+{
+  "Items": [
+    {
+      "orderNo": { "N": "2" },
+      "name": { "S": "Kurt Geiger" },
+      "description": { "S": "test" },
+      "recordType": { "S": "work" },
+      "role": { "S": "Junior Software Engineer" },
+      "location": { "S": "London" },
+      "date": { "S": "Jan 2022 - Present" }
+    },
+    {
+      "orderNo": { "N": "1" },
+      "name": { "S": "The Social Store" },
+      "description": { "S": "test" },
+      "recordType": { "S": "work" },
+      "role": { "S": "Web Designer" },
+      "location": { "S": "London" },
+      "date": { "S": "Jul 2021 - Jan 2022" }
+    }
+  ],
+  "Count": 2,
+  "ScannedCount": 2
+}
