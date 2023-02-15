@@ -1,14 +1,18 @@
-# Welcome to your CDK TypeScript project
+# Portfolio  🎨
 
-This is a blank project for CDK development with TypeScript.
+This is my new and improved portfolio website. 
+By utilising AWS on-demand services, I have been able to improve the infrastructure of my website. Github actions has been added to aid this project with handling deployment.
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+## Technologies
+* React
+* AWS 
+## Architecture 🔧 
 
-## Useful commands
+<img src="./assets/frontend_portfolio.jpg" alt="My Project GIF" width="600" height="400">
 
-* `npm run build`   compile typescript to js
-* `npm run watch`   watch for changes and compile
-* `npm run test`    perform the jest unit tests
-* `cdk deploy`      deploy this stack to your default AWS account/region
-* `cdk diff`        compare deployed stack with current state
-* `cdk synth`       emits the synthesized CloudFormation template
+
+
+
+
+
+
