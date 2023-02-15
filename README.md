@@ -11,10 +11,3 @@ By utilising AWS on-demand services, I have been able to improve the infrastruct
 ## Architecture 🔧 
 
 <img src="./assets/backend_portfolio.jpg" alt="My Project GIF" width="600" height="400">
-
-
-
-
-
-
-
